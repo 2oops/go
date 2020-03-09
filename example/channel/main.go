@@ -1,9 +1,9 @@
 package main
 
 import(
-	"log"
-	"net/http"
-	_ "net/http/pprof"
+	// "log"
+	// "net/http"
+	// _ "net/http/pprof"
 	"fmt" 
 	"math/rand"
 	"time"
@@ -42,9 +42,9 @@ func main() {
 	// 消费
 	customer(channel)
 
-	go func()  {
-		log.Println(http.ListenAndServe("localhost:10000", nil))
-	}()
+	// go func()  {
+	// 	log.Println(http.ListenAndServe("localhost:10000", nil))
+	// }()
 }
 
 

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"container/list"
 	"unsafe"
+	"os/user"
 )
 
 type weekday int
@@ -92,4 +93,7 @@ func main()  {
 	fmt.Println( unsafe.Sizeof( m ) ) // 8
 	var c chan string
 	fmt.Println( unsafe.Sizeof( c ) ) // 8
+
+	u, _ := user.Current()
+	fmt.Println(u.Username)
 }
